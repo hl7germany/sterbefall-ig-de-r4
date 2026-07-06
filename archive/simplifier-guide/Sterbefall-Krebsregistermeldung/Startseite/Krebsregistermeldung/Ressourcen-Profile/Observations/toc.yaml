@@ -1,0 +1,8 @@
+- name: Index
+  filename: Index.page.md
+- name: Basis Observation
+  filename: Basis-Observation.page.md
+- name: Todesursache
+  filename: Todesursache.page.md
+- name: Krebserkrankung
+  filename: Krebserkrankung.page.md

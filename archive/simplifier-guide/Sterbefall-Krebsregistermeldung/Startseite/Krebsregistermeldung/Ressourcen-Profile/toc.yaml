@@ -1,0 +1,26 @@
+- name: Index
+  filename: Index.page.md
+- name: Verstorbene Person
+  filename: Verstorbene-Person.page.md
+- name: Organisation
+  filename: Organisation.page.md
+- name: Arzt
+  filename: Arzt.page.md
+- name: Arzt Zuordnung
+  filename: Arzt-Zuordnung.page.md
+- name: Leichenschau
+  filename: Leichenschau.page.md
+- name: Obduktion Anfrage
+  filename: Obduktion-Anfrage.page.md
+- name: Obduktion
+  filename: Obduktion.page.md
+- name: Dateien
+  filename: Dateien.page.md
+- name: Sterbeurkunde Ausstellung
+  filename: Sterbeurkunde-Ausstellung.page.md
+- name: Observations
+  filename: Observations
+- name: Export Provenance
+  filename: Export-Provenance.page.md
+- name: Export Bundle
+  filename: Export-Bundle.page.md

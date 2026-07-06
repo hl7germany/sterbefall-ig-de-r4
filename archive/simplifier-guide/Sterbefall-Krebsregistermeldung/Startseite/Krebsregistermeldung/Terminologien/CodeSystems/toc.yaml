@@ -1,0 +1,12 @@
+- name: Index
+  filename: Index.page.md
+- name: BerufsgruppeCS
+  filename: BerufsgruppeCS.page.md
+- name: DateiTypCS
+  filename: DateiTypCS.page.md
+- name: FacharztgruppeCS
+  filename: FacharztgruppeCS.page.md
+- name: TodesursacheCodeCS
+  filename: TodesursacheCodeCS.page.md
+- name: ObservationCodesErweiterungCS
+  filename: ObservationCodesErweiterungCS.page.md

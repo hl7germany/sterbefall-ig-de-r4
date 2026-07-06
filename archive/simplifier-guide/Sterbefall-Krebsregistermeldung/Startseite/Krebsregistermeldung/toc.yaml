@@ -1,0 +1,12 @@
+- name: Index
+  filename: Index.page.md
+- name: Ressourcen-Profile
+  filename: Ressourcen-Profile
+- name: Operations
+  filename: Operations
+- name: Extensions
+  filename: Extensions
+- name: Terminologien
+  filename: Terminologien
+- name: Beispiele
+  filename: Examples.page.md

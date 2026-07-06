@@ -1,0 +1,10 @@
+{
+  "package-id": "de.fhir.sterbefall-krebsregistermeldung",
+  "version": "1.0.0",
+  "path": "http://ig.fhir.de/igs/stf/1.0.0",
+  "mode": "milestone",
+  "status": "release",
+  "sequence": "STU1",
+  "desc": "German FHIR implementation guide for the interoperable transmission of the data required from the death certificate to the cancer registries. Developed within the German Public Health Service (ÖGD) in close collaboration with public health experts, cancer registries, and FHIR specialists, it defines the standards, data structures, and resources needed to report the relevant death certificate data to the cancer registries while ensuring data protection and security.",
+  "first": false
+}

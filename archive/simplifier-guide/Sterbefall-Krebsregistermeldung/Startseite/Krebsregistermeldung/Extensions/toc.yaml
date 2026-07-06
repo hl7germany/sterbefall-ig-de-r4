@@ -1,0 +1,8 @@
+- name: Index
+  filename: Index.page.md
+- name: Zuletzt behandelnder Arzt
+  filename: ZuletztBehandelnderArztExtension.page.md
+- name: Bundesland
+  filename: Bundesland.page.md
+- name: Gemeindekennzahl
+  filename: Gemeindekennzahl.page.md

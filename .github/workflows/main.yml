@@ -1,0 +1,108 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI (FHIR Validation)
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # Validate all resources using Firely Terminal
+  CI_FHIR_VALIDATION:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+
+      # Java and .NET are already installed on ubuntu-latest
+
+      - name: Firely.Terminal (GitHub Actions)
+        uses: FirelyTeam/firely-terminal-pipeline@v0.8.4
+        with:
+          PATH_TO_CONFORMANCE_RESOURCES: Resources/fsh-generated/resources/
+          DOTNET_VALIDATION_ENABLED: true
+          JAVA_VALIDATION_ENABLED: true
+          JAVA_VALIDATION_OPTIONS: >
+            -allow-example-urls true
+            -output validation.json
+            -html-output validation.html
+            -show-message-ids
+            -language de
+            -jurisdiction de
+            -display-issues-are-warnings
+            -advisor-file validator/advisor.json
+            -resolution-context file:Resources/fsh-generated/resources/
+          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
+          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
+          SUSHI_ENABLED: true
+          TERMINOLOGY_SERVICE_BFARM_ENABLED: false
+          SUSHI_OPTIONS: Resources/
+          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA
+
+      - name: Upload validation artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          name: fhir-validation-results
+          path: |
+            validation.json
+            validation.html
+          retention-days: 1
+
+      - name: Convert Validation Report
+        uses: patrick-werner/validation-outcome-markdown-renderer@v1
+        with:
+          bundle-file: validation.json
+          include: warnings
+          pr-summary-path: pr-summary.md
+          filters: |
+            # Struktur: fileName|messageId|detailsWildcard|location
+            |Display_Name_for__should_be_one_of__instead_of|*Wrong Display Name*|
+
+      - name: Append pipeline summary link
+        if: always() && github.event_name == 'pull_request'
+        run: |
+          echo "" >> pr-summary.md
+          echo "🔗 [View full pipeline summary on GitHub Actions](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID})" >> pr-summary.md
+
+      - name: Find existing summary comment
+        if: always() && github.event_name == 'pull_request'
+        id: find_comment
+        uses: peter-evans/find-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body-includes: "<!-- fhir-validation-summary -->"
+
+      - name: Create or update PR comment
+        if: always() && github.event_name == 'pull_request'
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-id: ${{ steps.find_comment.outputs.comment-id }}
+          body-path: pr-summary.md
+          edit-mode: replace
+
+      - name: Validate Resource Status
+        uses: patrick-werner/fhir-resource-status-check@1.2.0
+        with:
+          folder: "./Resources/fsh-generated/resources/"
+
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          committer_name: GitHub Actions Bot
+          committer_email: ActionBot@github.com
+          add: Resources/fsh-generated/resources/
+          message: auto-generated FHIR files by GitHub Actions (CI FSH to FHIR Validation)

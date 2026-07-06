@@ -1,0 +1,46 @@
+# ╭─────────────────────────Commonly Used ImplementationGuide Properties───────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. The most commonly   │
+# │  used properties are included. For a list of all supported properties and their functions,     │
+# │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: de.fhir.sterbefall-krebsregistermeldung
+canonical: http://ig.fhir.de/igs/stf # TODO: Zu klären, ob wir das auf eine HL7 URL umstellen, dann brechen nur alle Canonicals...
+name: Sterbefall-Krebsregistermeldung
+title: "Sterbefall - Krebsregistermeldung IG DE"
+#description: "FHIR-Spezifikation für die interoperable Übertragung der Daten aus der Todesbescheinigung an die Krebsregister im Rahmen des Öffentlichen Gesundheitsdienstes."
+status: active # draft | active | retired | unknown
+version: 1.0.0
+fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+copyrightYear: 2026+
+releaseLabel: STU1
+publisher:
+  name: HL7 Deutschland e.V.
+  url: https://hl7.de
+dependencies:
+  de.basisprofil.r4: 1.5.4
+
+pages:
+  index.md:
+    title: Einführung
+  ReleaseNotes.md:
+    title: Release Notes
+  Akteure-und-Interaktionen.md:
+    title: Akteure und Interaktionen
+  Festlegungen-und-Architektur.md:
+    title: Festlegungen und Architektur
+  Beispiele.md:
+    title: Fallbeispiele
+
+
+menu:
+  Einführung: index.html
+  Release Notes: ReleaseNotes.html
+  Über diese Spezifikation:
+    Akteure und Interaktionen: Akteure-und-Interaktionen.html
+    Festlegungen und Architektur: Festlegungen-und-Architektur.html
+  Fallbeispiele: Beispiele.html
+  FHIR-Artefakte: artifacts.html
+
+instanceOptions:
+  manualSliceOrdering: true # true | false
+  setMetaProfile: always # always | never | inline-only | standalone-only
