@@ -31,7 +31,6 @@ pages:
   Beispiele.md:
     title: Fallbeispiele
 
-
 menu:
   Einführung: index.html
   Release Notes: ReleaseNotes.html
