@@ -30,7 +30,7 @@ jobs:
       # Java and .NET are already installed on ubuntu-latest
 
       - name: Firely.Terminal (GitHub Actions)
-        uses: FirelyTeam/firely-terminal-pipeline@v0.8.4
+        uses: FirelyTeam/firely-terminal-pipeline@v0.8.14
         with:
           PATH_TO_CONFORMANCE_RESOURCES: fsh-generated/
           DOTNET_VALIDATION_ENABLED: true
@@ -62,7 +62,7 @@ jobs:
           retention-days: 1
 
       - name: Convert Validation Report
-        uses: patrick-werner/validation-outcome-markdown-renderer@v1
+        uses: patrick-werner/validation-outcome-markdown-renderer@v1.3
         with:
           bundle-file: validation.json
           include: warnings
