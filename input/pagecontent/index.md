@@ -5,27 +5,31 @@ Die Dokumentation und Informationsübermittlung in einem Sterbefall umfasst vers
 
 Die Spezifikation wurde in enger Zusammenarbeit mit Fachpersonen aus dem Öffentlichen Gesundheitsdienst und den Krebsregistern sowie IT-Experten und FHIR-Spezialisten entwickelt und stellt sicher, dass Datenschutz und Sicherheit gewährleistet sind. Dieser Implementierungsleitfaden bietet eine umfassende Übersicht über die Standards, Datenstrukturen und Ressourcen, die für die Meldungen an die Krebsregister von Bedeutung sind. Die Spezifikation dient als Leitfaden für Entwickler, Gesundheitseinrichtungen und die Krebsregister, um sie in ihre Systeme zu integrieren und den Prozess der Krebsregistermeldung zu optimieren.
 
-### Anfangs- und (geplantes) Enddatum
-
-Anfangsdatum: September 2024  
-Enddatum: Noch nicht geplant
-
 ### Status
 
-Version: 1.0.0-ballot  
-Reifegrad: Draft  
-Abstimmungsverfahren: geplant
+Version: 1.0.0  
+Datum: t.b.d
+Reifegrad: STU  
 
-### Review und Kommentierung
+#### Abstimmungsverfahren
 
-Leitfaden für Kommentierende: 
+|Version|Status|
+|-|---|
+| 1.0.0 | Februar 2026 durchgeführt |
 
 ### Beteiligte Organisationen
+
+* HL7 Deutschland e.V.
+* Plattform 65c ?
+
+#### Beteiligte Organisationen (ELFA-Projekt bis März 2026)
+
 * ELFA Maßnahme Interoperabilität (Förderprojekt Pakt ÖGD)
 * Bundesministerium für Gesundheit (IOP ÖGD Task Force)
 * gematik GmbH
 * Gefyra GmbH
 
 ### Fürsorger
+* Jonas Schön
 * Stefan Lang (stefan.lang@lang-hitc.de)
 * Rüdiger Hochscheidt (ruediger.hochscheidt@H-IT-Beratung.de)
