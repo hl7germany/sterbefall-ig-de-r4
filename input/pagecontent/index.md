@@ -1,4 +1,4 @@
-<a href="https://github.com/gematik/fhir-sterbefall" class="btn btn-primary">GitHub Repository</a>
+<a href="https://github.com/hl7germany/sterbefall-ig-de-r4" class="btn btn-primary">GitHub Repository</a>
 
 ### Zusammenfassung
 Die Dokumentation und Informationsübermittlung in einem Sterbefall umfasst verschiedene Organisationen und Institutionen, die jeweils einen bestimmten Teil der Informationen generieren oder / und verarbeiten. Ziel ist es, mit dieser FHIR - Spezifikation einen Standard zu entwickeln, mit dem eine interoperable Datenübertragung der notwendigen Daten aus der Todesbescheinigung an die Krebsregister erfolgen kann.
