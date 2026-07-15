@@ -15,7 +15,8 @@ Die Interaktionen zwischen diesen Akteuren erfolgen in erster Linie über den Da
 
 Zum besseren Verständnis wurde der Workflow, der in diesem IG beschrieben ist, in folgendem Diagramm visualisiert:
 
-<img src="Workflow.png" alt="Workflow-Diagramm" style="max-width: 100%;"/>
+<img src="Workflow.png" alt="Workflow-Diagramm" style="max-width: 100%;"/>  
+
 
 ---
 
