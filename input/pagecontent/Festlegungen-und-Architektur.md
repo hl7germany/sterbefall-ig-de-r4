@@ -56,7 +56,7 @@ Das Informationsmodell stellt die Beziehungen zwischen den verschiedenen Objektk
 
 Zu den jeweiligen Datenelementen vgl. die entsprechenden FHIR-Ressourcen unter [FHIR-Artefakte](artifacts.html).
 
-<img src="Infomodell.png" alt="Informationsmodell" style="max-width: 100%;"/>  
+<img src="Infomodell.png" alt="Informationsmodell" style="max-width: 100%;"/><br />  
 
 
 ---
@@ -65,4 +65,4 @@ Zu den jeweiligen Datenelementen vgl. die entsprechenden FHIR-Ressourcen unter [
 
 Im Rahmen einer Teststellung dieser Spezifikation wurde folgende Beispielarchitektur in verschiedenen Bundesländern etabliert. In Hessen und Bayern wurden im Projektzeitraum Testdaten zwischen Softwarelösungen der Gesundheitsämter und den Landeskrebsregistern ausgetauscht.
 
-<img src="Architektur.png" alt="Beispielarchitektur" style="max-width: 100%;"/>  
+<img src="Architektur.png" alt="Beispielarchitektur" style="max-width: 100%;"/><br />  
