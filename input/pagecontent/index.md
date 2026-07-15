@@ -30,6 +30,5 @@ Reifegrad: STU
 * Gefyra GmbH
 
 ### Fürsorger
-* Jonas Schön
+* Jonas Schön (js@gefyra.de)
 * Stefan Lang (stefan.lang@lang-hitc.de)
-* Rüdiger Hochscheidt (ruediger.hochscheidt@H-IT-Beratung.de)

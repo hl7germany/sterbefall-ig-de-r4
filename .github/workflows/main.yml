@@ -43,7 +43,6 @@ jobs:
             -language de
             -jurisdiction de
             -display-issues-are-warnings
-            -advisor-file validator/advisor.json
             -resolution-context file:fsh-generated/
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
