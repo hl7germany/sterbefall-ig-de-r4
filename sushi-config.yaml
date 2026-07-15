@@ -43,3 +43,6 @@ menu:
 instanceOptions:
   manualSliceOrdering: true # true | false
   setMetaProfile: always # always | never | inline-only | standalone-only
+
+parameters:
+  i18n-default-lang: de
